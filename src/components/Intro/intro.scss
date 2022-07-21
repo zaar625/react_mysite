@@ -1,0 +1,58 @@
+@use '../../scss/utils/' as *;
+
+.intro {
+    h1 {
+        color:var(--main-color);
+        text-align: center;
+    }
+    
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &__bg {
+            border-radius: 15px;
+            img {
+                width: 100%;
+               }
+        }
+        &__ctx {
+            p {
+                display: flex;
+                line-height: 25px;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+        }
+        
+    }
+    
+    &__sns {
+        display: flex;
+        gap:1rem;
+        justify-content: end;
+
+        & p {
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            margin-right: 8px;
+            font-size: 1rem;
+            
+            &:hover {
+                color: var(--main-color);
+            }
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,24 @@
+:root {
+    // 기본설정
+    --main-bg:#000;
+    --main-bg-light: #fff;
+    --second-bg: #212121;
+    --txt-color: #fff;
+    --main-color:#FAC70F;
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    // 라이트설정
+    --main-bg-light: #fff;
+    --second-bg-light: #EFEEE9;
+    --txt-color-light: #000;
+    --box-shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    //메인테마컬러 설정
+    --main-color-apricot: #F6B352;
+    --main-color-yellow: #FAC70F;
+    --main-color-green: #1AB395;
+    --main-color-pink: #F68657;
+}
+
+$mobile-width: 767px;
+$tablet-width: 1024px;

@@ -1,0 +1,49 @@
+@use '../../scss/utils/' as *;
+
+
+.contact__form {
+  margin: auto;
+
+  &__group {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    & label > input, textarea {
+      margin-top: 1rem;
+    }
+  }
+}
+
+  label {
+    font-size: 1rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+    font-size: 0.825rem;
+    padding: 1.2rem;
+    color: var(--gray-1);
+    background-color: var(--main-bg);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+  }
+  textarea {
+    resize: vertical;
+  }
+
+  button[type='submit'] {
+    background-color: var(--main-bg);
+    color: var(--txt-color);
+    font-size: 1rem;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 1rem ;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--main-color);
+    }
+  }

@@ -1,0 +1,181 @@
+@use '../../scss/utils/' as *;
+
+.slidebar {
+    position: fixed;
+    left: 0;
+    background-color:var(--second-bg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    gap: 2rem;
+
+    @include tablet {
+        position: inherit;
+        width: 100%;
+        height:max-content;
+        padding: 0.5rem;
+    }
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+        width: 100%;
+
+        @include tablet{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .toggle{
+            display: none;
+
+            & > i {
+                font-size: 2rem;
+            }
+
+            @include tablet{
+                display: block;
+                z-index: 99;
+            }
+        }
+        .logo {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            
+            @include tablet{
+                gap: 1rem;
+                justify-content: flex-start;
+            }
+        }
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+    
+                li {
+                    padding: 0.6rem 1rem;
+                    border-radius: 0.6rem;
+    
+                    &:hover {
+                        background-color: var(--main-color);
+                        a {
+                            color: black;
+                        }
+                    }
+    
+                    a {
+                    text-decoration: none;
+                    display: flex;
+                    gap: 1rem;
+                    color: var(--txt-color);
+                    align-items: center;
+                    }
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+                .active {
+                    background-color:var(--main-color);
+                    a {
+                    color: black;
+                    }
+                }
+            }
+    
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+}
+
+// responsive Nav
+.responsive-nav{
+    position: fixed;
+    right: -58.33%;
+    top: 0;
+    z-index: 10;
+    background-color: var(--main-bg);
+    height: 100vh;
+    width: 58.33%;
+    transition: 0.4s ease-in-out;
+    display: none;
+    gap: 1rem;
+    // opacity: 0;
+    // visibility: hidden;
+    padding: 5rem 1rem;
+
+    @include tablet{
+        display: block;
+    }
+    &.navActive{
+        right: 0%;
+    }
+    
+    &__container {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        
+        & > .navbar__user {
+            display: block;
+        }
+    }
+    &__links{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            li {
+                padding: 0.6rem 1rem;
+                border-radius: 0.6rem;
+
+                &:hover {
+                    background-color: var(--main-color);
+                    a {
+                        color: black;
+                    }
+                }
+
+                a {
+                text-decoration: none;
+                display: flex;
+                gap: 1rem;
+                color: var(--txt-color);
+                align-items: center;
+                }
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+            .active {
+                background-color:var(--main-color);
+                a {
+                color: black;
+                }
+            }
+        }
+    }
+    
+
+}

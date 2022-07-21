@@ -1,0 +1,63 @@
+.setting-box, .bell-box{
+    position: relative;
+}
+.dropbox{
+        display: flex;
+        gap: 1rem;
+        justify-content: end;
+
+    &__toggle{        
+        button  {
+            font-size: 1.5rem;
+            color: var(--txt-color);
+           
+            &:hover{
+                color: var(--main-color);
+            }
+        }
+    }
+    &__content{
+        padding: 0.5rem;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 15px);
+        max-width: 300px;
+        width: max-content;
+        background-color: var(--second-bg);
+        transform: scale(0);
+        box-shadow: var(--box-shadow);
+        border-radius: 10%;
+        overflow: hidden;
+        transform-origin: top right;
+        transition: transform 0.3s ease 0s;
+
+        &.active{
+                transform: scale(1);
+                transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                z-index:1
+        }
+        &.bellBox{
+            background-color: initial;
+            box-shadow: initial;
+        }
+    }
+}
+.bell-box {
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: "1";
+        background-color: var(--main-color);
+        color: black;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        padding: 0.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -8px;
+        right: -6px;
+    }
+}

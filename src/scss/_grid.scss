@@ -1,0 +1,45 @@
+@use './utils/' as *;
+@use 'sass:math';
+
+//colum width %설정
+@for $i from 1 through 12 {
+    $v: math.div($i, 12) * 100; //1/12*100
+    .col-#{$i} {
+        width: $v*1%;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// medium screen
+
+@include tablet {
+    @for $i from 1 through 12 {
+        $v: math.div($i, 12) * 100;
+        .col-md-#{$i} {
+            width: $v*1%;
+        }
+    }
+
+    .hide-md {
+        display: none;
+    }
+}
+
+// small screen
+
+@include mobile {
+    @for $i from 1 through 12 {
+        $v: math.div($i, 12) * 100;
+        .col-sm-#{$i} {
+            width: $v*1%;
+        }
+    }
+
+    .hide-sm {
+        display: none;
+    }
+}

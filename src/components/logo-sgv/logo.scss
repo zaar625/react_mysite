@@ -1,0 +1,109 @@
+// svg logo Lee
+@use '../../scss/utils/' as *;
+.svg-logo-lee {
+        position: absolute;
+        left: 0;
+        top: -2rem;
+        transform: rotate(-25deg);
+        animation: text-fill-animation1 0.5s ease forwards 4.5s;
+
+        @include tablet {
+            top:0
+        }
+        @include mobile {
+            top: -1.2rem;
+        }
+    }
+    .svg-logo-lee path{
+        stroke: var(--main-color);
+    }
+
+    .svg-logo-lee path:nth-child(1) {
+        stroke-dasharray: 547.05px;
+        stroke-dashoffset: 547.05px;
+        animation: text-animation1 2s ease forwards 0.2;
+    }
+    .svg-logo-lee path:nth-child(2) {
+        stroke-dasharray: 250.5px;
+        stroke-dashoffset: 250.5px;
+        animation: text-animation1 2s ease forwards 0.5s;
+    }
+    .svg-logo-lee path:nth-child(3) {
+        stroke-dasharray: 165.6px;
+        stroke-dashoffset: 165.6px;
+        animation: text-animation1 2s ease forwards 1s;
+    }
+    @keyframes text-animation1 {
+        to {
+        stroke-dashoffset: 0;
+        }
+    }
+    
+    @keyframes text-fill-animation1{
+        from {
+        fill: transparent;
+        }
+        to {
+        fill:var(--main-color);
+        }
+    }
+
+    // 
+    .svg-logo-port {
+        animation: text-fill-animation2 0.5s ease forwards 4s;
+    }
+    .svg-logo-port path{
+        stroke:var(--txt-color)
+    }
+    .svg-logo-port path:nth-child(1) {
+    stroke-dasharray: 547.05px;
+    stroke-dashoffset: 547.05px;
+    animation: text-animation2 1.5s ease forwards 0.2s;
+    }
+    .svg-logo-port path:nth-child(2) {
+    stroke-dasharray: 250.5px;
+    stroke-dashoffset: 250.5px;
+    animation: text-animation2 1.5s ease forwards 0.5s;
+    }
+    .svg-logo-port path:nth-child(3) {
+    stroke-dasharray: 165.6px;
+    stroke-dashoffset: 165.6px;
+    animation: text-animation2 1.5s ease forwards 1s;
+    }
+    .svg-logo-port path:nth-child(4) {
+    stroke-dasharray: 415.1px;
+    stroke-dashoffset: 415.1px;
+    animation: text-animation2 1.5s ease forwards 1.5s;
+    }
+    .svg-logo-port path:nth-child(5) {
+    stroke-dasharray: 457.7px;
+    stroke-dashoffset: 457.7px;
+    animation: text-animation2 1.5s ease forwards 2s;
+    }
+    .svg-logo-port path:nth-child(6) {
+    stroke-dasharray: 250.5px;
+    stroke-dashoffset: 250.5px;
+    animation: text-animation2 1.5s ease forwards 2.5s;
+    }
+    .svg-logo-port path:nth-child(7) {
+    stroke-dasharray: 206.9px;
+    stroke-dashoffset: 206.9px;
+    animation: text-animation2 1.5s ease forwards 3s;
+    }
+    .svg-logo-port path:nth-child(8) {
+    stroke-dasharray: 411.1px;
+    stroke-dashoffset: 411.1px;
+    animation: text-animation1 1.5s ease forwards 3.5s;
+    }
+    .svg-logo-port path:nth-child(9) {
+    stroke-dasharray: 457.71px;
+    stroke-dashoffset: 457.71px;
+    animation: text-animation2 1.5s ease forwards 4s;
+    }
+    
+    @keyframes text-animation2 {
+    to {
+        stroke-dashoffset: 0;
+    }
+    }
+    

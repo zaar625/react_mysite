@@ -1,0 +1,70 @@
+@use '../../../../scss/utils/' as *;
+.calculator{
+    // height: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &__btns {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    
+        & button {
+            border-radius: 10px;
+            font-size: 1.25rem;
+            font-weight: 500;
+            background-color: var(--main-bg);
+            color: var(--txt-color);
+
+            &:last-child {
+                border-radius: 50%;
+                background-color: rgb(80, 80, 80);
+
+                @include tablet{
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        & .btn__op {
+            color: var(--main-color);
+        }
+    }
+
+    // 계산값 나오기
+    &__result {
+        position:relative;
+        margin-bottom: 20px;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 100px;
+
+        &__exp {
+            font-size: 3.5rem;
+            line-height: 1;
+            transform-origin: right bottom;
+            transition: transform .3s ease;
+            color:var(--main-color);
+
+            &:last-child{
+                position: absolute;
+                right: 0;
+            }
+
+            & span {
+                display: inline-block;
+                overflow: hidden;
+                transition: width .3s ease;
+            }
+        }
+    }
+
+
+
+
+}

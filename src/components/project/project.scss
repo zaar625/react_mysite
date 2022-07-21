@@ -1,0 +1,97 @@
+@use '../../scss/utils/' as *;
+
+.project-card {
+    display: flex;
+    gap:2rem;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+
+    &__imgContainer {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+    &__hover {
+        display: flex;
+        flex-direction: column;
+        gap:0.5rem;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.514);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+
+        h1{
+            font-size: 1rem;
+            font-weight: 300;
+            transform: translateX(-50px);
+            transition: all 0.4s ease-in-out;
+            
+            &:first-child{
+            font-size: 1.15rem;
+            font-weight: bold;
+            transform: translateX(50px);
+            transition: all 0.4s ease-in-out;
+            }
+        }
+
+        .view {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.825rem;
+            margin-top: 2rem;
+            transform: translateY(20px);
+            transition: all 0.2s ease-in-out;
+
+            p {
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+
+    &:hover &__hover{
+        opacity: 1;
+    }
+    &:hover &__hover h1{
+        transform: translateX(0px);
+    }
+    &:hover &__hover .view {
+        transform: translateY(0px);
+    }
+
+    &__des {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1rem;
+
+        @include mobile {
+            font-size: 0.825rem;
+        }
+        div {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 10px;
+                font-size: 0.825rem;
+            }
+        }
+    }
+}
